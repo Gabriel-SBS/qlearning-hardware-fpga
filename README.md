@@ -1,10 +1,10 @@
 # Q-Learning 32×32 em FPGA
 
-Um agente de Q-Learning tabular que aprende a sair de um labirinto 32×32 rodando inteiro em hardware, descrito em Verilog. A FSM tem 5 estados e faz um passo de treinamento por ciclo de clock. O mapa e o comando de início chegam pela UART, e no fim de cada episódio o hardware devolve pela mesma UART um pacote de telemetria.
+Projeto feito no Programa CI Digital (CEPEDI). Um agente de Q-Learning tabular que aprende a sair de um labirinto 32×32 rodando inteiro em hardware, descrito em Verilog. A FSM tem 5 estados e faz um passo de treinamento por ciclo de clock. O mapa e o comando de início chegam pela UART, e no fim de cada episódio o hardware devolve pela mesma UART um pacote de telemetria.
 
 Junto com o RTL há ferramentas em Python para gerar labirintos e acompanhar o treino ao vivo, e três jeitos de co-simular tudo com cocotb, sem precisar da placa. Um deles funciona no Windows.
 
-**Autores:** Gabriel Sena Barbosa Silva ([@Gabriel-SBS](https://github.com/Gabriel-SBS)) e João Vítor Cedraz ([@JvCedrazC](https://github.com/JvCedrazC)).
+**Autores:** Gabriel Sena Barbosa Silva ([@Gabriel-SBS](https://github.com/Gabriel-SBS)) e João Vítor Cedraz Carneiro ([@JvCedrazC](https://github.com/JvCedrazC)).
 
 ## Sumário
 
