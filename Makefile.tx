@@ -1,0 +1,14 @@
+TOPLEVEL_LANG = verilog
+SIM ?= xcelium
+VERILOG_SOURCES += $(PWD)/uart_tx.v
+TOPLEVEL = uart_tx
+MODULE = test_tx_only
+
+CLKS_PER_BIT ?= 8
+ifeq ($(SIM),xcelium)
+    SIM_ARGS += -defparam uart_tx.CLKS_PER_BIT=$(CLKS_PER_BIT)
+else
+    COMPILE_ARGS += -Puart_tx.CLKS_PER_BIT=$(CLKS_PER_BIT)
+endif
+
+include $(shell cocotb-config --makefiles)/Makefile.sim

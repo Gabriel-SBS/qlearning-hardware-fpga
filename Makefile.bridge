@@ -1,0 +1,24 @@
+TOPLEVEL_LANG = verilog
+SIM ?= xcelium
+
+VERILOG_SOURCES += $(PWD)/qlearning_top_v2.v
+VERILOG_SOURCES += $(PWD)/uart_tx.v
+VERILOG_SOURCES += $(PWD)/uart_rx.v
+VERILOG_SOURCES += $(PWD)/maze_env.v
+VERILOG_SOURCES += $(PWD)/q_table_ram5.v
+VERILOG_SOURCES += $(PWD)/lfsr16.v
+VERILOG_SOURCES += $(PWD)/argmax5.v
+VERILOG_SOURCES += $(PWD)/ula_bellman.v
+VERILOG_SOURCES += $(PWD)/fsm_qlearning_v2.v
+
+TOPLEVEL = qlearning_top_v2
+MODULE   = test_fpga_hw_bridge
+
+CLKS_PER_BIT ?= 4
+ifeq ($(SIM),xcelium)
+    SIM_ARGS += -defparam qlearning_top_v2.CLKS_PER_BIT=$(CLKS_PER_BIT)
+else
+    COMPILE_ARGS += -Pqlearning_top_v2.CLKS_PER_BIT=$(CLKS_PER_BIT)
+endif
+
+include $(shell cocotb-config --makefiles)/Makefile.sim

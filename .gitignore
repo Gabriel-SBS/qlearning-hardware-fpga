@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+sim_build/
+sim_build_win/
+results.xml
+*.vcd
+*.fst
+*.vvp
+sim_ram5
+sim_fsm_v2
+sim_e2e
+.venv/
