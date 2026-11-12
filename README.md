@@ -8,6 +8,8 @@ ferramentas Python (geração de labirintos, visualizador ao vivo com navegaçã
 temporal) e três modos de co-simulação **cocotb** permitem desenvolver e
 depurar todo o sistema sem FPGA física — inclusive no Windows.
 
+**Autores:** Gabriel Sena Barbosa Silva ([@Gabriel-SBS](https://github.com/Gabriel-SBS)) e João Vítor Cedraz ([@JvCedrazC](https://github.com/JvCedrazC)).
+
 ---
 
 ## Sumário
